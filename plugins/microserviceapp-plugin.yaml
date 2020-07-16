@@ -1,0 +1,20 @@
+kind: "EntandoPlugin"
+apiVersion: "entando.org/v1"
+metadata:
+  name: "microserviceapp-plugin"
+spec:
+  image: entando/microservice-app:0.0.1-SNAPSHOT
+  replicas: 1
+  dbms: mysql
+  parameters: {}
+  ingressPath: "/microserviceApp"
+  healthCheckPath: "/management/health"
+  securityLevel: "strict"
+  connectionConfigNames: []
+  permissions: []
+  roles:
+  - name: microserviceApp-admin
+    code: microserviceApp-admin
+  - name: conference-admin
+    code: "conference-admin"
+# entando-needle-descriptor-add-roles - Entando blueprint will add roles here
