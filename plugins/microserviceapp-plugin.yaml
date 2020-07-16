@@ -3,7 +3,7 @@ apiVersion: "entando.org/v1"
 metadata:
   name: "microserviceapp-plugin"
 spec:
-  image: entando/microservice-app:0.0.1-SNAPSHOT
+  image: gayadockerhub/entando-hello-img:latest
   replicas: 1
   dbms: mysql
   parameters: {}
